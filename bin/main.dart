@@ -1,4 +1,4 @@
-class Student{
+class Student {
   String name;
   int score;
 
@@ -17,7 +17,8 @@ class Student{
 
 // Challenge 4 - Sort the students based on their scores
 
+// PART 2
+// Write a function which prints 'Beginning Task n', delays for n seconds and prints
+// 'Completed Task n'
 
-void main() {
-
-}
+void main() {}
