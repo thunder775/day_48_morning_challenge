@@ -27,13 +27,17 @@ class Student {
 
 // Challenge 4 - Sort the students based on their scores
 
-void delayDemoFunction(int n){
+void delayDemoFunction(int n) async {
   print('Beginning task $n');
-  sleep(Duration(seconds: n));
-  print('Completed task $n');
+  await Future.delayed(Duration(seconds: n));
+    print('Task $n completed');
+  
 }
-
-
+void function(int n ){
+print('tast $n started');
+// Future(taskCompleted)
+Future.delayed(Duration(seconds: n)).then((val)=>print('task $n completed'));
+}
 
 // PART 2
 // Write a function which prints 'Beginning Task n', delays for n seconds and prints
@@ -56,5 +60,9 @@ void main() {
       a.score == b.score ? 0 : (a.score < b.score ? -1 : 1));
   print(students);
   delayDemoFunction(3);
+  delayDemoFunction(2);
+  delayDemoFunction(1);
+  function(3);
+  function(2);
+  function(1);
 }
-
