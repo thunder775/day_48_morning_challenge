@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 class Student {
@@ -26,6 +27,22 @@ class Student {
 
 // Challenge 4 - Sort the students based on their scores
 
+void delayDemoFunction(int n){
+  print('Beginning task $n');
+  sleep(Duration(seconds: n));
+  print('Completed task $n');
+}
+
+
+
+// PART 2
+// Write a function which prints 'Beginning Task n', delays for n seconds and prints
+// 'Completed Task n'
+
+// PART 3
+// Create a new function which does the same thing as previous function but
+// without await keyword . (HINT: use '.then' method)
+
 void main() {
   var s1 = Student('Ram', 87);
   var s2 = Student('Shyam', 80);
@@ -38,4 +55,6 @@ void main() {
   students.sort((Student a, Student b) =>
       a.score == b.score ? 0 : (a.score < b.score ? -1 : 1));
   print(students);
+  delayDemoFunction(3);
 }
+
